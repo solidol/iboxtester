@@ -1,6 +1,6 @@
 object fmRegister: TfmRegister
-  Left = 210
-  Top = 183
+  Left = 259
+  Top = 207
   Width = 979
   Height = 563
   Caption = 'fmRegister'

@@ -1,6 +1,6 @@
 object fmTest1: TfmTest1
-  Left = 360
-  Top = 347
+  Left = 272
+  Top = 173
   Width = 979
   Height = 563
   Caption = 'fmTest1'
@@ -15,9 +15,10 @@ object fmTest1: TfmTest1
   Position = poDefault
   Visible = True
   WindowState = wsMaximized
+  OnCreate = FormCreate
   DesignSize = (
-    963
-    525)
+    971
+    536)
   PixelsPerInch = 96
   TextHeight = 13
   object DBText1: TDBText
@@ -62,6 +63,7 @@ object fmTest1: TfmTest1
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnClick = BitBtn1Click
   end
   object BitBtn2: TBitBtn
     Left = 96
@@ -91,6 +93,7 @@ object fmTest1: TfmTest1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnClick = BitBtn3Click
   end
   object BitBtn4: TBitBtn
     Left = 728
@@ -106,6 +109,55 @@ object fmTest1: TfmTest1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = BitBtn4Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 584
+    Top = 8
+    Width = 337
+    Height = 105
+    DataSource = MyDataSource2
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBChart1: TDBChart
+    Left = 272
+    Top = 272
+    Width = 400
+    Height = 250
+    AllowPanning = pmNone
+    AllowZoom = False
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    BackWall.Pen.Visible = False
+    Title.Text.Strings = (
+      'TDBChart')
+    AxisVisible = False
+    ClipPoints = False
+    Frame.Visible = False
+    View3D = False
+    View3DOptions.Elevation = 315
+    View3DOptions.Orthogonal = False
+    View3DOptions.Perspective = 0
+    View3DOptions.Rotation = 360
+    View3DWalls = False
+    TabOrder = 5
+    object Series1: TPieSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = True
+      DataSource = MyQuery2
+      SeriesColor = clRed
+      XLabelsSource = 'name'
+      OtherSlice.Text = 'Other'
+      PieValues.DateTime = False
+      PieValues.Name = 'Pie'
+      PieValues.Multiplier = 1.000000000000000000
+      PieValues.Order = loNone
+    end
   end
   object MyQuery1: TMyQuery
     Connection = fmMain.MyConnection1
@@ -123,5 +175,30 @@ object fmTest1: TfmTest1
     DataSet = MyQuery1
     Left = 120
     Top = 232
+  end
+  object updratio: TMyQuery
+    Connection = fmMain.MyConnection1
+    Left = 40
+    Top = 80
+  end
+  object MyQuery2: TMyQuery
+    Connection = fmMain.MyConnection1
+    SQL.Strings = (
+      'select name, ratio from spec order by ratio limit 3')
+    Active = True
+    Left = 456
+    Top = 40
+  end
+  object MyDataSource2: TMyDataSource
+    DataSet = MyQuery2
+    Left = 504
+    Top = 56
+  end
+  object flushratio: TMyQuery
+    Connection = fmMain.MyConnection1
+    SQL.Strings = (
+      'update spec set ratio = 0')
+    Left = 24
+    Top = 480
   end
 end

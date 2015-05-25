@@ -1,6 +1,6 @@
 object fmMain: TfmMain
-  Left = 351
-  Top = 168
+  Left = 365
+  Top = 132
   Align = alClient
   BorderStyle = bsNone
   Caption = 'fmMain'
@@ -44,7 +44,7 @@ object fmMain: TfmMain
       Top = 128
       Width = 150
       Height = 80
-      Caption = 'BitBtn1'
+      Caption = #1058#1077#1089#1090' '#8470'1'
       TabOrder = 1
       OnClick = BitBtn2Click
     end
