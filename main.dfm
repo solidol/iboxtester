@@ -1,6 +1,6 @@
 object fmMain: TfmMain
-  Left = 334
-  Top = 141
+  Left = 363
+  Top = 182
   Align = alClient
   BorderStyle = bsNone
   Caption = 'fmMain'
@@ -25,7 +25,6 @@ object fmMain: TfmMain
     Height = 606
     Align = alLeft
     BevelOuter = bvNone
-    Caption = 'pnLeft'
     TabOrder = 0
     DesignSize = (
       200
@@ -37,6 +36,12 @@ object fmMain: TfmMain
       Height = 80
       Anchors = [akLeft, akBottom]
       Caption = #1042#1110#1093#1110#1076
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 0
       OnClick = BitBtn4Click
     end
@@ -45,7 +50,13 @@ object fmMain: TfmMain
       Top = 17
       Width = 150
       Height = 80
-      Caption = #1053#1072#1095#1072#1090#1100
+      Caption = #1056#1086#1079#1087#1086#1095#1072#1090#1080
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 1
       OnClick = BitBtn1Click
     end
@@ -56,6 +67,12 @@ object fmMain: TfmMain
       Height = 80
       Caption = #1058#1077#1089#1090' '#8470'1'
       Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 2
       OnClick = BitBtn2Click
     end
@@ -66,7 +83,14 @@ object fmMain: TfmMain
       Height = 80
       Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1080
       Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 3
+      OnClick = BitBtn3Click
     end
   end
   object Panel1: TPanel
@@ -77,6 +101,12 @@ object fmMain: TfmMain
     Align = alClient
     BevelOuter = bvNone
     Caption = #1061#1055#1058#1050' '#1054#1053#1055#1059
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 1
   end
   object MyConnection1: TMyConnection

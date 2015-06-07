@@ -1,6 +1,6 @@
 object fmRegister: TfmRegister
-  Left = 311
-  Top = 284
+  Left = 274
+  Top = 189
   Width = 979
   Height = 563
   Caption = 'fmRegister'
@@ -146,5 +146,12 @@ object fmRegister: TfmRegister
     DataSet = mytabuser
     Left = 152
     Top = 208
+  end
+  object MyQuery1: TMyQuery
+    Connection = fmMain.MyConnection1
+    SQL.Strings = (
+      'select id from student order by id desc limit 1')
+    Left = 448
+    Top = 120
   end
 end

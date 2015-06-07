@@ -1,6 +1,6 @@
 object fmTest1: TfmTest1
-  Left = 545
-  Top = 145
+  Left = 460
+  Top = 167
   Width = 979
   Height = 563
   Caption = 'fmTest1'
@@ -111,19 +111,6 @@ object fmTest1: TfmTest1
     TabOrder = 3
     OnClick = BitBtn4Click
   end
-  object DBGrid1: TDBGrid
-    Left = 584
-    Top = 8
-    Width = 337
-    Height = 105
-    DataSource = MyDataSource2
-    TabOrder = 4
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
-    TitleFont.Style = []
-  end
   object MyQuery1: TMyQuery
     Connection = fmMain.MyConnection1
     SQL.Strings = (
@@ -149,7 +136,7 @@ object fmTest1: TfmTest1
   object MyQuery2: TMyQuery
     Connection = fmMain.MyConnection1
     SQL.Strings = (
-      'select name, ratio from spec order by ratio limit 3')
+      'select id, name, ratio from spec order by ratio limit 4')
     Active = True
     Left = 392
     Top = 56
@@ -165,5 +152,10 @@ object fmTest1: TfmTest1
       'update spec set ratio = 0')
     Left = 24
     Top = 480
+  end
+  object MyQuery3: TMyQuery
+    Connection = fmMain.MyConnection1
+    Left = 552
+    Top = 72
   end
 end

@@ -22,8 +22,8 @@ type
     updratio: TMyQuery;
     MyQuery2: TMyQuery;
     MyDataSource2: TMyDataSource;
-    DBGrid1: TDBGrid;
     flushratio: TMyQuery;
+    MyQuery3: TMyQuery;
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
@@ -48,13 +48,32 @@ uses
 {$R *.dfm}
 
 procedure TfmTest1.nextq;
-
+var
+  r1, r2, r3, r4: integer;
 begin
  if myquery1.Eof then
  begin
  label1.Caption:='Тест закінчено, подивіться результати!' ;
   fmMain.BitBtn3.Enabled:=true;
   fmMain.BitBtn2.Enabled:=false;
+  myquery2.First;
+  r1:=myquery2.fieldbyname('id').asinteger;
+  myquery2.Next;
+ r2:=myquery2.fieldbyname('id').asinteger;
+  myquery2.Next;
+ r3:=myquery2.fieldbyname('id').asinteger;
+  myquery2.Next;
+ r4:=myquery2.fieldbyname('id').asinteger;
+
+  myquery3.SQL.Text:='update student set r1='+inttostr(r1)+', r2='+inttostr(r2)+
+                    ', r3='+inttostr(r3)+', r4='+inttostr(r4)+' where id='+
+                    inttostr(fmMain.laststud);
+                    label1.Caption:=myquery2.SQL.Text;
+  myquery3.Execute;
+  bitbtn1.Enabled:=false;
+  bitbtn2.Enabled:=false;
+  bitbtn3.Enabled:=false;
+  bitbtn4.Enabled:=false;
  end
  else
 myquery1.Next;

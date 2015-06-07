@@ -29,22 +29,26 @@ type
     procedure BitBtn4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
 
   private
     { Private declarations }
   public
     { Public declarations }
+    laststud: integer;
   end;
 
 var
   fmMain: TfmMain;
   tblink: integer;
 
+
 implementation
 
-uses reguser, test1;
+uses reguser, test1, results;
 
 {$R *.dfm}
+
 
 
 
@@ -70,6 +74,11 @@ begin
 panel1.Hide;
   Application.CreateForm(TfmTest1, fmTest1);
 
+end;
+
+procedure TfmMain.BitBtn3Click(Sender: TObject);
+begin
+Application.CreateForm(TfmResults, fmResults);
 end;
 
 end.

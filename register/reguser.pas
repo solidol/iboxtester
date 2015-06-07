@@ -20,6 +20,7 @@ type
     mytabuser: TMyTable;
     MyDataSource1: TMyDataSource;
     MyDataSource2: TMyDataSource;
+    MyQuery1: TMyQuery;
     procedure bbRunTestClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -38,14 +39,15 @@ uses main, test1;
 
 procedure TfmRegister.bbRunTestClick(Sender: TObject);
 begin
-//
+myquery1.Execute;
+fmMain.laststud:=myquery1.fieldbyname('id').AsInteger;
 
 
 //  Application.CreateForm(TfmTest1, fmTest1);
  mytabuser.post;
 // fmregister.Close;
  fmMain.BitBtn2.Enabled:=true;
- fmregister.Destroy;
+ fmregister.close;
 end;
 
 procedure TfmRegister.FormShow(Sender: TObject);
