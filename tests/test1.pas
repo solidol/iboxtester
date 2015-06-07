@@ -24,13 +24,12 @@ type
     MyDataSource2: TMyDataSource;
     DBGrid1: TDBGrid;
     flushratio: TMyQuery;
-    DBChart1: TDBChart;
-    Series1: TPieSeries;
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure nextq;
   private
     { Private declarations }
   public
@@ -48,11 +47,25 @@ uses
 
 {$R *.dfm}
 
+procedure TfmTest1.nextq;
+
+begin
+ if myquery1.Eof then
+ begin
+ label1.Caption:='Тест закінчено, подивіться результати!' ;
+  fmMain.BitBtn3.Enabled:=true;
+  fmMain.BitBtn2.Enabled:=false;
+ end
+ else
+myquery1.Next;
+end;
+
 procedure TfmTest1.BitBtn2Click(Sender: TObject);
 var
 
  sql: string;
 begin
+
 sql := 'update spec set ratio = ratio + 1 where id = '+myquery1.FieldByName('a1').AsString;
 updratio.SQL.Text:=sql;
 
@@ -60,7 +73,7 @@ updratio.Execute;
 myquery2.Active:=false;
 
 myquery2.Execute;
-myquery1.Next;
+nextq;
 end;
 
 procedure TfmTest1.BitBtn3Click(Sender: TObject);
@@ -74,7 +87,7 @@ updratio.SQL.Text:=sql;
 updratio.Execute;
 myquery2.Active:=false;
 myquery2.Execute;
-myquery1.Next;
+nextq;
 end;
 
 procedure TfmTest1.BitBtn4Click(Sender: TObject);
@@ -88,7 +101,7 @@ updratio.SQL.Text:=sql;
 updratio.Execute;
 myquery2.Active:=false;
 myquery2.Execute;
-myquery1.Next;
+nextq;
 end;
 
 procedure TfmTest1.BitBtn1Click(Sender: TObject);
@@ -102,7 +115,7 @@ updratio.SQL.Text:=sql;
 updratio.Execute;
 myquery2.Active:=false;
 myquery2.Execute;
-myquery1.Next;
+nextq;
 end;
 
 procedure TfmTest1.FormCreate(Sender: TObject);

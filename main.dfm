@@ -1,6 +1,6 @@
 object fmMain: TfmMain
-  Left = 365
-  Top = 132
+  Left = 334
+  Top = 141
   Align = alClient
   BorderStyle = bsNone
   Caption = 'fmMain'
@@ -30,41 +30,43 @@ object fmMain: TfmMain
     DesignSize = (
       200
       606)
-    object BitBtn1: TBitBtn
-      Left = 24
-      Top = 24
-      Width = 150
-      Height = 80
-      Caption = #1053#1072#1095#1072#1090#1100
-      TabOrder = 0
-      OnClick = BitBtn1Click
-    end
-    object BitBtn2: TBitBtn
-      Left = 24
-      Top = 128
-      Width = 150
-      Height = 80
-      Caption = #1058#1077#1089#1090' '#8470'1'
-      TabOrder = 1
-      OnClick = BitBtn2Click
-    end
-    object BitBtn3: TBitBtn
-      Left = 24
-      Top = 232
-      Width = 150
-      Height = 80
-      Caption = 'BitBtn1'
-      TabOrder = 2
-    end
     object BitBtn4: TBitBtn
       Left = 24
       Top = 495
       Width = 150
       Height = 80
       Anchors = [akLeft, akBottom]
-      Caption = 'BitBtn1'
-      TabOrder = 3
+      Caption = #1042#1110#1093#1110#1076
+      TabOrder = 0
       OnClick = BitBtn4Click
+    end
+    object BitBtn1: TBitBtn
+      Left = 19
+      Top = 17
+      Width = 150
+      Height = 80
+      Caption = #1053#1072#1095#1072#1090#1100
+      TabOrder = 1
+      OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 19
+      Top = 121
+      Width = 150
+      Height = 80
+      Caption = #1058#1077#1089#1090' '#8470'1'
+      Enabled = False
+      TabOrder = 2
+      OnClick = BitBtn2Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 19
+      Top = 225
+      Width = 150
+      Height = 80
+      Caption = #1056#1077#1079#1091#1083#1100#1090#1072#1090#1080
+      Enabled = False
+      TabOrder = 3
     end
   end
   object Panel1: TPanel

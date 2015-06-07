@@ -10,9 +10,6 @@ uses
 type
   TfmMain = class(TForm)
     pnLeft: TPanel;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
     BitBtn4: TBitBtn;
     MyConnection1: TMyConnection;
     Panel1: TPanel;
@@ -25,10 +22,14 @@ type
     MyTable1fio: TStringField;
     mqset: TMyQuery;
     XPManifest1: TXPManifest;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -37,12 +38,15 @@ type
 
 var
   fmMain: TfmMain;
+  tblink: integer;
 
 implementation
 
 uses reguser, test1;
 
 {$R *.dfm}
+
+
 
 procedure TfmMain.BitBtn1Click(Sender: TObject);
 begin

@@ -1,6 +1,6 @@
 object fmRegister: TfmRegister
-  Left = 259
-  Top = 207
+  Left = 311
+  Top = 284
   Width = 979
   Height = 563
   Caption = 'fmRegister'
@@ -15,6 +15,7 @@ object fmRegister: TfmRegister
   Position = poDefault
   Visible = True
   WindowState = wsMaximized
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -31,24 +32,11 @@ object fmRegister: TfmRegister
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 416
+    Left = 528
     Top = 48
-    Width = 147
+    Width = 255
     Height = 24
-    Caption = #1052#1110#1089#1090#1086' '#1072#1073#1086' '#1088#1072#1081#1086#1085
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -21
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label3: TLabel
-    Left = 672
-    Top = 48
-    Width = 164
-    Height = 24
-    Caption = #1053#1072#1089#1077#1083#1077#1085#1085#1080#1081' '#1087#1091#1085#1082#1090
+    Caption = #1052#1110#1089#1090#1086' '#1072#1073#1086' '#1085#1072#1089#1077#1083#1077#1085#1085#1080#1081' '#1087#1091#1085#1082#1090
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -21
@@ -87,10 +75,10 @@ object fmRegister: TfmRegister
     ParentFont = False
     TabOrder = 0
   end
-  object cbKolhoz: TDBEdit
-    Left = 632
+  object cbArea: TDBLookupComboBox
+    Left = 368
     Top = 80
-    Width = 257
+    Width = 521
     Height = 32
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -99,19 +87,6 @@ object fmRegister: TfmRegister
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-  end
-  object cbArea: TDBLookupComboBox
-    Left = 368
-    Top = 80
-    Width = 257
-    Height = 32
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -21
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 2
   end
   object edFIO: TDBEdit
     Left = 104
@@ -126,15 +101,21 @@ object fmRegister: TfmRegister
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
   end
   object bbRunTest: TBitBtn
     Left = 360
     Top = 272
     Width = 297
     Height = 113
-    Caption = 'bbRunTest'
-    TabOrder = 4
+    Caption = #1042#1080#1073#1088#1072#1090#1080' '#1090#1077#1089#1090
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
     OnClick = bbRunTestClick
   end
   object maytabreg: TMyTable

@@ -9,10 +9,8 @@ uses
 type
   TfmRegister = class(TForm)
     cbRegion: TDBLookupComboBox;
-    cbKolhoz: TDBEdit;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
     cbArea: TDBLookupComboBox;
     edFIO: TDBEdit;
     Label4: TLabel;
@@ -23,6 +21,7 @@ type
     MyDataSource1: TMyDataSource;
     MyDataSource2: TMyDataSource;
     procedure bbRunTestClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,11 +38,19 @@ uses main, test1;
 
 procedure TfmRegister.bbRunTestClick(Sender: TObject);
 begin
-//fmregister.Destroy;
-fmregister.Close;
-mytabuser.Append;
+//
+
+
 //  Application.CreateForm(TfmTest1, fmTest1);
  mytabuser.post;
+// fmregister.Close;
+ fmMain.BitBtn2.Enabled:=true;
+ fmregister.Destroy;
+end;
+
+procedure TfmRegister.FormShow(Sender: TObject);
+begin
+ mytabuser.Append;
 end;
 
 end.

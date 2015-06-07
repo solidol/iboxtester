@@ -1,6 +1,6 @@
 object fmTest1: TfmTest1
-  Left = 272
-  Top = 173
+  Left = 545
+  Top = 145
   Width = 979
   Height = 563
   Caption = 'fmTest1'
@@ -17,8 +17,8 @@ object fmTest1: TfmTest1
   WindowState = wsMaximized
   OnCreate = FormCreate
   DesignSize = (
-    971
-    536)
+    963
+    525)
   PixelsPerInch = 96
   TextHeight = 13
   object DBText1: TDBText
@@ -39,9 +39,9 @@ object fmTest1: TfmTest1
   object Label1: TLabel
     Left = 88
     Top = 24
-    Width = 299
+    Width = 405
     Height = 29
-    Caption = #1054#1090#1074#1077#1090#1100#1090#1077' '#1085#1072' '#1074#1086#1087#1088#1086#1089' '#1085#1080#1078#1077
+    Caption = #1044#1072#1081#1090#1077' '#1074#1110#1076#1087#1086#1074#1110#1076#1100' '#1085#1072' '#1087#1080#1090#1072#1085#1085#1103' '#1085#1080#1078#1095#1077
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -24
@@ -124,41 +124,6 @@ object fmTest1: TfmTest1
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
   end
-  object DBChart1: TDBChart
-    Left = 272
-    Top = 272
-    Width = 400
-    Height = 250
-    AllowPanning = pmNone
-    AllowZoom = False
-    BackWall.Brush.Color = clWhite
-    BackWall.Brush.Style = bsClear
-    BackWall.Pen.Visible = False
-    Title.Text.Strings = (
-      'TDBChart')
-    AxisVisible = False
-    ClipPoints = False
-    Frame.Visible = False
-    View3D = False
-    View3DOptions.Elevation = 315
-    View3DOptions.Orthogonal = False
-    View3DOptions.Perspective = 0
-    View3DOptions.Rotation = 360
-    View3DWalls = False
-    TabOrder = 5
-    object Series1: TPieSeries
-      Marks.ArrowLength = 8
-      Marks.Visible = True
-      DataSource = MyQuery2
-      SeriesColor = clRed
-      XLabelsSource = 'name'
-      OtherSlice.Text = 'Other'
-      PieValues.DateTime = False
-      PieValues.Name = 'Pie'
-      PieValues.Multiplier = 1.000000000000000000
-      PieValues.Order = loNone
-    end
-  end
   object MyQuery1: TMyQuery
     Connection = fmMain.MyConnection1
     SQL.Strings = (
@@ -186,12 +151,12 @@ object fmTest1: TfmTest1
     SQL.Strings = (
       'select name, ratio from spec order by ratio limit 3')
     Active = True
-    Left = 456
-    Top = 40
+    Left = 392
+    Top = 56
   end
   object MyDataSource2: TMyDataSource
     DataSet = MyQuery2
-    Left = 504
+    Left = 440
     Top = 56
   end
   object flushratio: TMyQuery
