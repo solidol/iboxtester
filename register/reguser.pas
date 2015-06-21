@@ -11,7 +11,6 @@ type
     cbRegion: TDBLookupComboBox;
     Label1: TLabel;
     Label2: TLabel;
-    cbArea: TDBLookupComboBox;
     edFIO: TDBEdit;
     Label4: TLabel;
     bbRunTest: TBitBtn;
@@ -21,6 +20,7 @@ type
     MyDataSource1: TMyDataSource;
     MyDataSource2: TMyDataSource;
     MyQuery1: TMyQuery;
+    DBEdit1: TDBEdit;
     procedure bbRunTestClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private

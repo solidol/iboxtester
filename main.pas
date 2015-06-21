@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBAccess, MyAccess, Grids,
-  DBGrids, MemDS, XPMan;
+  DBGrids, MemDS, XPMan, jpeg;
 
 type
   TfmMain = class(TForm)
@@ -25,6 +25,8 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     BitBtn3: TBitBtn;
+    Image1: TImage;
+    BitBtn5: TBitBtn;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);

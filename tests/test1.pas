@@ -6,24 +6,26 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, DBCtrls, shellapi, DB, MemDS, DBAccess,
   MyAccess, Grids, DBGrids, TeEngine, Series, ExtCtrls, TeeProcs, Chart,
-  DbChart;
+  DbChart, jpeg;
 
 type
   TfmTest1 = class(TForm)
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    DBText1: TDBText;
     Label1: TLabel;
     MyQuery1: TMyQuery;
     BitBtn3: TBitBtn;
     BitBtn4: TBitBtn;
-    MyTable1: TMyTable;
     MyDataSource1: TMyDataSource;
     updratio: TMyQuery;
     MyQuery2: TMyQuery;
     MyDataSource2: TMyDataSource;
     flushratio: TMyQuery;
     MyQuery3: TMyQuery;
+    Label2: TLabel;
+    Image1: TImage;
+    Panel1: TPanel;
+    DBText1: TDBText;
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
@@ -68,7 +70,7 @@ begin
   myquery3.SQL.Text:='update student set r1='+inttostr(r1)+', r2='+inttostr(r2)+
                     ', r3='+inttostr(r3)+', r4='+inttostr(r4)+' where id='+
                     inttostr(fmMain.laststud);
-                    label1.Caption:=myquery2.SQL.Text;
+                    label1.Caption:='Тестування завершено, подивіться результати';
   myquery3.Execute;
   bitbtn1.Enabled:=false;
   bitbtn2.Enabled:=false;

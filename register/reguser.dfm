@@ -47,9 +47,9 @@ object fmRegister: TfmRegister
   object Label4: TLabel
     Left = 168
     Top = 128
-    Width = 128
+    Width = 145
     Height = 24
-    Caption = #1060#1072#1084#1110#1083#1110#1103' '#1090#1072' '#1030#1084#39#1103
+    Caption = #1055#1088#1110#1079#1074#1080#1097#1077' '#1090#1072' '#1030#1084#39#1103
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -21
@@ -75,19 +75,6 @@ object fmRegister: TfmRegister
     ParentFont = False
     TabOrder = 0
   end
-  object cbArea: TDBLookupComboBox
-    Left = 368
-    Top = 80
-    Width = 521
-    Height = 32
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -21
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-  end
   object edFIO: TDBEdit
     Left = 104
     Top = 168
@@ -101,7 +88,7 @@ object fmRegister: TfmRegister
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object bbRunTest: TBitBtn
     Left = 360
@@ -115,8 +102,23 @@ object fmRegister: TfmRegister
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
     OnClick = bbRunTestClick
+  end
+  object DBEdit1: TDBEdit
+    Left = 384
+    Top = 80
+    Width = 497
+    Height = 32
+    DataField = 'city'
+    DataSource = MyDataSource2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
   end
   object maytabreg: TMyTable
     TableName = 'region'
